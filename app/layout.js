@@ -1,5 +1,5 @@
 import "./globals.css";
-import MainHeader from "@/components/main-header";
+import MainHeader from "@/components/headers/main-header";
 export const metadata = {
    title: "NextBite",
    description: "Delicious meals, shared by a food-loving community.",
