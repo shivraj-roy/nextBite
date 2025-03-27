@@ -1,5 +1,5 @@
 import "./globals.css";
-
+import MainHeader from "@/components/main-header";
 export const metadata = {
    title: "NextBite",
    description: "Delicious meals, shared by a food-loving community.",
@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
                   ></path>
                </svg>
             </div>
-
+            <MainHeader />
             {children}
          </body>
       </html>
