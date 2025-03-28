@@ -1,8 +1,11 @@
 import Link from "next/link";
 import classes from "./page.module.css";
 import MealsList from "@/components/meals/meals-list";
+import { getMeals } from "@/lib/meals";
 
-const Meals = () => {
+const Meals = async () => {
+   const meals = await getMeals();
+
    return (
       <>
          <header className={classes.header}>
@@ -19,7 +22,7 @@ const Meals = () => {
             </p>
          </header>
          <main className={classes.main}>
-            <MealsList meals={[]} />
+            <MealsList meals={meals} />
          </main>
       </>
    );
