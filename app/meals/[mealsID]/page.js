@@ -1,9 +1,14 @@
-import classes from "./page.module.css";
 import Image from "next/image";
+import { notFound } from "next/navigation";
+import classes from "./page.module.css";
 import { getMeal } from "@/lib/meals";
 
 const MealsDetails = ({ params }) => {
    const meal = getMeal(params.mealsID);
+
+   if (!meal) {
+      notFound();
+   }
 
    return (
       <>
